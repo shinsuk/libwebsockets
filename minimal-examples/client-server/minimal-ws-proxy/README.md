@@ -36,3 +36,19 @@ Data received on the remote wss connection is copied to all open browser windows
 
 A ringbuffer holds up to 8 lines of text in the server, and the browser shows
 the last 20 lines of received text.
+
+## Build with MacPorts
+
+Install libwebsockets via MacPorts
+
+```
+port install libwebsockets
+```
+
+Put below statements into CMakeLists.txt
+
+```
+set(CMAKE_REQUIRED_INCLUDES /opt/local/include)                                                                                          
+include_directories(/opt/local/include)                                                                                                  
+link_directories(/opt/local/lib)                     
+```

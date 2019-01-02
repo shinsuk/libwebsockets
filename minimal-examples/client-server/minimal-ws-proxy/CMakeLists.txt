@@ -3,6 +3,9 @@ include(CheckCSourceCompiles)
 
 set(SAMP lws-minimal-ws-proxy)
 set(SRCS minimal-ws-proxy.c)
+set(CMAKE_REQUIRED_INCLUDES /opt/local/include)
+include_directories(/opt/local/include)
+link_directories(/opt/local/lib)
 
 # If we are being built as part of lws, confirm current build config supports
 # reqconfig, else skip building ourselves.
